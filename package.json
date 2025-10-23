@@ -1,0 +1,13 @@
+{
+  "name": "loversandfriends",
+  "version": "1.0.0",
+  "description": "A date ideas bank for couples",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["date", "ideas", "couples"],
+  "author": "",
+  "license": "ISC"
+}
+
