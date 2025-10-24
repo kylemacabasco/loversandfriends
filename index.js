@@ -165,7 +165,32 @@ async function main() {
         }
 
         if (trimmedInput.toLowerCase() === 'done') {
-            console.log('\n💡 Done adding date ideas!\n');
+            if (data.dateIdeas.length === 0) {
+                console.log('\n⚠️  No date ideas to choose from! Add some first.\n');
+                continue;
+            }
+            
+            // Pick a random date idea
+            const randomIndex = Math.floor(Math.random() * data.dateIdeas.length);
+            const randomIdea = data.dateIdeas[randomIndex];
+            
+            console.log('\n🎲 Randomly picked date idea:\n');
+            console.log('='.repeat(50));
+            
+            if (typeof randomIdea === 'string') {
+                console.log(`${randomIdea}`);
+            } else {
+                // Randomly pick between user's idea or partner's idea
+                const pickUser = Math.random() < 0.5;
+                const chosenPerson = pickUser ? data.userName : data.partnerName;
+                const chosenIdea = pickUser ? randomIdea.userInput : randomIdea.partnerInput;
+                
+                console.log(`Category: ${randomIdea.category}`);
+                console.log(`Winner: ${chosenIdea}`);
+            }
+            
+            console.log('='.repeat(50));
+            console.log('\n💕 Enjoy your date! 💕\n');
             rl.close();
             break;
         }
