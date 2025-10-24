@@ -168,7 +168,6 @@ async function main() {
             console.log('\n💡 Done adding date ideas!\n');
             rl.close();
             break;
-            break;
         }
         
         // If none of the commands matched, show help
