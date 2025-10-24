@@ -26,6 +26,7 @@ npm start
 ## Commands
 
 - **`add`** - Add a date idea where both partners input their specific ideas
+- **`done`** - Randomly pick a date idea from your bank
 - **`delete [number]`** - Remove a specific date idea
 - **`reset`** - Start over with new names
 - **`quit` or `exit`** - Close the program
